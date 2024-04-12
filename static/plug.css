@@ -1,8 +1,8 @@
 @keyframes loadingAnimation {
-    from {
-      background-color: green;
+    0% {
+      background-color: yellow;
     }
-    to {
+    100% {
       background-color: blue;
     }
   }
@@ -10,11 +10,9 @@
   .loading-circle {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: yellow;
     border-radius: 50%;
-    animation-name: loadingAnimation;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+    animation: loadingAnimation 4s ease-in-out alternate infinite;
     transform: translate(-50%, -50%);
     position: relative;
     top: 40px; left: 50%;
