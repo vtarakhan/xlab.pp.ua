@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/plug.css"> <!-- Підключаємо наш CSS файл -->
-    <title>XLab</title>
-    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xlab.pp.ua – Скоро тут щось буде</title>
+<link rel="stylesheet" href="static/plug.css">
+<link rel="icon" type="image/png" href="static/favicon.png">
 </head>
 <body>
-    <div class="loading-container">
-        <h1>Колись тут щось буде)))</h1>
-        <div class="loading-circle"></div> <!-- Елемент з класом "loading-circle" для анімації -->
-    </div>
+
+<h1>Скоро тут щось буде</h1>
+
+<svg width="220" height="220">
+    <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#4cafef" />
+            <stop offset="100%" stop-color="#2196f3" />
+        </linearGradient>
+    </defs>
+    <circle class="bg-circle" cx="110" cy="110" r="85" />
+    <circle class="progress-circle" cx="110" cy="110" r="85" />
+</svg>
+
 </body>
-
 </html>
-
-

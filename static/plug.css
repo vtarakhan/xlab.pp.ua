@@ -1,29 +1,72 @@
-@keyframes loadingAnimation {
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #4cafef, 0 0 20px #4cafef, 0 0 40px #2196f3;
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #4cafef, 0 0 20px #4cafef, 0 0 40px #2196f3;
+    }
+    50% {
+        text-shadow: 0 0 20px #4cafef, 0 0 40px #4cafef, 0 0 80px #2196f3;
+    }
+}
+
+svg {
+    transform: rotate(-90deg);
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 6px #4cafef) drop-shadow(0 0 12px #2196f3);
+    }
+    50% {
+        filter: drop-shadow(0 0 12px #4cafef) drop-shadow(0 0 24px #2196f3);
+    }
+}
+
+.progress-circle {
+    stroke: url(#gradient);
+    stroke-width: 15;
+    fill: none;
+    stroke-linecap: round;
+    animation: spin 2s linear infinite;
+}
+
+.bg-circle {
+    stroke: #222;
+    stroke-width: 15;
+    fill: none;
+}
+
+@keyframes spin {
     0% {
-      background-color: yellow;
+        stroke-dasharray: 1, 534;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 267, 534;
+        stroke-dashoffset: -133;
     }
     100% {
-      background-color: blue;
+        stroke-dasharray: 1, 534;
+        stroke-dashoffset: -534;
     }
-  }
-  
-  .loading-circle {
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
-    border-radius: 50%;
-    animation: loadingAnimation 4s ease-in-out alternate infinite;
-    transform: translate(-50%, -50%);
-    position: relative;
-    top: 40px; left: 50%;
-  }
-  h1 {
-    text-align: center;
-    font-size: 24px;
-  }
-  .loading-container {
-    transform: translate(-50%, -50%);
-    position: absolute;
-    top: 45%;
-    left: 50%;
-  }
+}
