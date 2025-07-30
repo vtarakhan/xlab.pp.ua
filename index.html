@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>xlab.pp.ua – Скоро тут щось буде</title>
+<title>xlab.pp.ua – Колись тут щось буде, але коли, хз</title>
 <link rel="stylesheet" href="static/plug.css">
 <link rel="icon" type="image/png" href="static/favicon.png">
 </head>
 <body>
 
-<h1>Скоро тут щось буде</h1>
+<canvas id="matrix"></canvas>
 
-<svg width="220" height="220">
-    <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#4cafef" />
-            <stop offset="100%" stop-color="#2196f3" />
-        </linearGradient>
-    </defs>
-    <circle class="bg-circle" cx="110" cy="110" r="85" />
-    <circle class="progress-circle" cx="110" cy="110" r="85" />
-</svg>
+<div class="content">
+    <h1>SYSTEM INITIALIZING...</h1>
 
+    <svg width="220" height="220">
+        <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00ff00" />
+                <stop offset="100%" stop-color="#009900" />
+            </linearGradient>
+        </defs>
+        <circle class="bg-circle" cx="110" cy="110" r="85" />
+        <circle class="progress-circle" cx="110" cy="110" r="85" />
+    </svg>
+</div>
+
+<script src="static/matrix.js"></script>
 </body>
 </html>
