@@ -25,6 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    padding: 0 10px; /* щоб текст не приликав до країв на мобілках */
+    box-sizing: border-box;
 }
 
 .loading-text {
@@ -33,6 +35,8 @@ body {
     letter-spacing: 2px;
     opacity: 1;
     transition: opacity 1s ease-in-out;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 .fade-out {
@@ -47,4 +51,27 @@ body {
 .unloaded {
     color: rgba(0, 255, 0, 0.1);
     text-shadow: none;
+}
+
+/* 📱 Мобільні пристрої до 480px */
+@media (max-width: 480px) {
+    .loading-text {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+    }
+}
+
+/* 📱 Планшети до 768px */
+@media (max-width: 768px) {
+    .loading-text {
+        font-size: 1.6em;
+    }
+}
+
+/* 📱 Дуже маленькі екрани, типу годинників */
+@media (max-width: 320px) {
+    .loading-text {
+        font-size: 1em;
+        letter-spacing: 0.5px;
+    }
 }
